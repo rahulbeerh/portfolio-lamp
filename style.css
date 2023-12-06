@@ -1,0 +1,333 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+html{
+    font-size: 62.5%;
+    font-family: 'Oswald',sans-serif;
+
+}
+.container{
+    position: relative;
+    background-color: rgba(31, 30, 30, 0.971);
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+.navbar{
+    width: 100%;
+    height: 14rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10rem;
+}
+.logo span{
+    font-family: 'Black Ops One',sans-serif;
+    font-size: 6rem;
+    color: #ddd;
+    position: relative;
+}
+
+.logo span::after{
+    content: "";
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-top: 1px solid #000;
+    width: 100%;
+    height: 1rem;
+}
+
+.navigation{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5rem;
+}
+.navigation a{
+    color: rgba(122, 108, 108, 0.971);
+    font-size: 3rem;
+    letter-spacing: 0.2rem;
+    font-family: 'Passion One',sans-serif;
+    transition: color .3s;
+}
+.navigation a:nth-child(1){
+    color: #ddd;
+}
+.navigation a:hover{
+    color: #ddd;
+}
+
+.lamp-wire{
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4%;
+    height: 1rem;
+    background: linear-gradient(rgb(48, 41, 41),transparent);
+    box-shadow: 0 0.5rem 1rem rgba(2, 2, 2, 0.7);
+}
+.lamp-head{
+    position: absolute;
+    right: 2%;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgb(48, 41, 41);
+    width: 6%;
+    height: 10rem;
+    border-radius: 0 50% 50% 0%;
+    box-shadow: 0 0.5rem 1rem rgba(2, 2, 2, 0.9);
+}
+.lamp-inner-head{
+    position: absolute;
+    right: 8%;
+    top: 50%;
+    transform: translateY(-50%);
+    background:rgba(48, 41, 41, 0.795);
+    width: 2%;
+    height:10rem;
+    border-radius: 50% 0 0 50%;
+    filter: blur(1rem);
+    box-shadow: 0 0.5rem 1rem rgba(255, 255, 255, 0.562);
+}
+.lamp-bulb{
+    position: absolute;
+    right: 8%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 3%;
+    height: 3rem;
+    background: linear-gradient(#ddd,#ddd);
+    border-radius:30% 0 0 30%;
+    box-shadow: 0 0.5rem 1rem #ddd;
+}
+.lamp-light{
+    position: absolute;
+    right: 11%;
+    top: 50%;
+    transform: translateY(-50%) ;
+    width: 25%;
+    height: 15rem;
+    background: linear-gradient(to right,transparent, #ddd);
+    box-shadow: 0 0.5rem 1rem #ddd;
+    opacity: 1;
+    z-index: 99;
+    filter: blur(5rem);
+}
+.lamp-light-shadow{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 70%;
+    height: 20rem;
+    background: linear-gradient(#000,#000);
+    box-shadow: 0 0.5rem 2rem rgba(2, 2, 2, 0.9);
+    filter: blur(2rem);
+    opacity:0.4;
+    border-radius: 50%;
+}
+
+.content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.main-heading{
+    max-width: 50rem;
+}
+.main-heading h3{
+    font-size: 5rem;
+    font-family: 'Passion One',sans-serif;
+    letter-spacing: 0.5rem;
+    background: linear-gradient(to right, rgba(122, 108, 108, 0.971),rgba(122, 108, 108, 0.571));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 0.5;
+    text-shadow: 0 0.5rem 1rem rgba(2, 2, 2, 0.7); 
+}
+
+.sub-heading{
+    max-width: 50rem;
+    margin-left: 2rem;
+    margin-top: 0.4rem;
+}
+.sub-heading h4{
+    font-size: 4rem;
+    font-family: 'Passion One',sans-serif;
+    letter-spacing: 0.3rem;
+    background: linear-gradient(to right, #ddd,rgba(122, 108, 108, 0.871));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0.5rem 1rem rgba(2, 2, 2, 0.7); 
+}
+
+.menu{
+    display: none;
+}
+.mobile-navigation{
+    transform: translateX(200rem);
+    display: flex;
+    position: absolute;
+    top:0;
+    left: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    height: 100vh;
+    width: 100%;
+    gap: 2rem;
+    padding-top: 0rem;
+    background: linear-gradient( rgba(31, 30, 30, 1), rgba(31, 30, 30, 1));
+    transition: transform 0.7s;
+}
+.mobile-navigation a{
+    font-size: 5rem;
+    letter-spacing: 0.4rem;
+    color: rgba(122, 108, 108, 0.971);
+    font-family: 'Passion One',sans-serif;
+    transition: color .3s;
+}
+
+.mobile-navigation a:nth-child(1){
+    color: #ddd;
+}
+
+.mobile-navigation a:hover{
+    color: #ddd;
+}
+
+.close{
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    border-radius: 50%;
+    width: 10rem;
+    height: 10rem;
+    font-size: 3rem;
+    font-family: 'Passion One',sans-serif;
+    border: none;
+    outline: none;
+    color: #ddd;
+    letter-spacing: 0.4rem;
+    background: linear-gradient( rgb(14, 13, 13), rgba(31, 30, 30, 1));
+}
+
+
+@media screen and (max-width:750px){
+    .menu{
+        display: block;
+        padding: 1rem;
+        width: 10rem;
+        font-size: 2rem;
+        background: linear-gradient(to right,rgba(122, 108, 108, 0.671),rgba(122, 108, 108, 0.871));
+        box-shadow: 0 0.5rem 1rem rgba(2, 2, 2, 0.7);
+        border: none;
+        outline: none;
+        border-radius: 1rem;
+        font-family: 'Passion One',sans-serif;
+        color: #ddd;
+        letter-spacing: 0.3rem;
+    }
+    .navigation{
+        display: none;
+    }
+    .menu:active{
+        transform: translateY(0.2rem);
+    }
+    .navbar{
+        padding: 0 2rem;
+    }
+}
+
+@media screen and (max-width:700px) {
+    .lamp-wire{
+        right: 0;
+        width: 6%;
+    }
+    .lamp-head{
+        position: absolute;
+        right: 6%;
+        width: 8%;
+    }
+    .lamp-bulb{
+        right: 14%;
+        top: 50%;
+        width: 4%;
+    }
+    .lamp-light{
+        position: absolute;
+        right: 18%;
+        width: 25%;
+    }
+    .lamp-light-shadow{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 70%;
+        height: 20rem;
+        background: linear-gradient(#000,#000);
+        box-shadow: 0 0.5rem 2rem rgba(2, 2, 2, 0.9);
+        filter: blur(2rem);
+        opacity:0.4;
+        border-radius: 50%;
+    }
+}
+
+@media screen and (max-width:700px) {
+    .content{
+        position: absolute;
+        top: 50%;
+        left: 40%;
+        transform: translate(-50%,-50%);
+    }
+    .lamp-wire{
+        right: 0;
+        width: 6%;
+    }
+    .lamp-head{
+        position: absolute;
+        right: 6%;
+        width: 12%;
+    }
+    .lamp-bulb{
+        right: 18%;
+        top: 50%;
+        width: 7%;
+    }
+    .lamp-light{
+        position: absolute;
+        right: 25%;
+        width: 40%;
+    }
+    .lamp-light-shadow{
+        position: absolute;
+        top: 50%;
+        left: 40%;
+        transform: translate(-50%,-50%);
+        width: 70%;
+        height: 20rem;
+        background: linear-gradient(#000,#000);
+        box-shadow: 0 0.5rem 2rem rgba(2, 2, 2, 0.9);
+        filter: blur(2rem);
+        opacity:0.4;
+        border-radius: 50%;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .main-heading h3{
+        font-size: 2.5rem;
+    }
+    .sub-heading h4{
+        font-size: 2rem;
+    }
+}
