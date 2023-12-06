@@ -1,13 +1,11 @@
-$(document).ready(function(){
-    const btn = $('button.menu');
-    const btnClose = $('.close-container');
-    const mobileNavigation = $('.mobile-navigation');
+const btn=document.querySelector('button.menu');
+const btnClose=document.querySelector('.close-container');
+btn.addEventListener('click',function(){
+    const mobileNavigation=document.querySelector(".mobile-navigation");
+    mobileNavigation.style.transform = "translateX(0rem)";
+})
 
-    btn.on('click', function(){
-        mobileNavigation.css('transform', 'translateX(0rem)');
-    });
-
-    btnClose.on('click', function(){
-        mobileNavigation.css('transform', 'translateX(200rem)');
-    });
-});
+btnClose.addEventListener('click',function(){
+    const mobileNavigation=document.querySelector(".mobile-navigation");
+    mobileNavigation.style.transform = "translateX(200rem)";
+})
